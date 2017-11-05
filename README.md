@@ -27,9 +27,9 @@ Vagrant coppies a number of files and folders (like aws credentials) from host t
 On the platform where docker engine is installed, execute the following commands to clone this repo:
 1. `alias git='docker run -it --rm --name git -v $PWD:/git -w /git indiehosters/git git'`
 2. `git version`
-3. `git clone https://github.com/shazChaudhry/infra.git`
-4. `sudo chown -R $USER infra`
-5. `cd infra/terraform/two-tiers`
+3. `git clone https://github.com/shazChaudhry/terraform-2tiers-arch.git`
+4. `sudo chown -R $USER terraform-2tiers-arch`
+5. `cd terraform-2tiers-arch`
 
 Terraform docker image is available at https://hub.docker.com/r/hashicorp/terraform/. Execute the following commands to run terraform:
 1. `alias terraform='docker run -it --rm --name terraform -v ~/.ssh/id_rsa.pub:/home/root/.ssh/id_rsa.pub -v ~/.aws/credentials:/home/root/.aws/credentials -v $PWD:/terraform -w /terraform hashicorp/terraform'`
